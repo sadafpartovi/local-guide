@@ -1,0 +1,19 @@
+
+.localForm {
+  border:2px solid lightgray !important;
+  border-radius: 50px;
+}
+
+.submit-button{
+  background-color: black;
+  color: white;
+  border-radius: 50px;
+  border: none;
+  margin: 1rem;
+  padding: 1rem;
+
+  min-width: 200px
+}
+
+
+

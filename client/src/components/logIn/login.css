@@ -1,0 +1,19 @@
+.container button{
+  background-color: black;
+  color: white;
+  outline: none;
+  border : none;
+
+  border-radius: 50px;
+
+
+}
+.container button:hover {
+  background-color: white;
+  color: black;
+}
+
+.full-height {
+  height: 100vh;
+
+}

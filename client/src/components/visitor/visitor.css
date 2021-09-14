@@ -1,0 +1,56 @@
+.search-nav-form {
+  min-width: 70rem;
+  border: 1px solid #eee;
+  border-radius: 10px;
+}
+input {
+  border: none;
+  min-width: 50rem;
+  outline: none;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    box-shadow: 0 0 0 30px var(--white) inset !important;
+    -webkit-box-shadow: 0 0 0 30px var(--white) inset !important;
+}
+
+.img-card {
+  width: 400px;
+  height: auto;
+  border-radius: 50px;
+}
+
+.selectedFilter {
+  background-color: black;
+  color: white;
+  border-radius: 50px;
+  border: none;
+  margin: 1rem;
+  padding: 1rem;
+  min-width: 200px;
+}
+
+.filterBtn {
+  background-color: white;
+  border-radius: 50px;
+  border: none;
+  margin: 1rem;
+  padding: 1rem;
+  min-width: 200px;
+}
+
+.map {
+  background-color: white;
+  border-radius: 50px;
+  border: none;
+  margin: 1rem;
+  padding: 1rem;
+  min-width: 200px;
+}
+
+
+
+
