@@ -13,6 +13,15 @@ const Place = new Schema({
   like: Number
 });
 
+const User = new Schema ({
+  email: String,
+  local: Boolean,
+  tourist: Boolean,
+  posts: [Place],
+
+})
+
+const UserModel = mongoose.model('User', User);
 const PlaceModel = mongoose.model('Place', Place);
 
 module.exports = PlaceModel;
