@@ -1,4 +1,4 @@
-const PlaceModel = require('../model/place.js');
+const {PlaceModel} = require('../model/place.js');
 
 const initilizeData = async() => {
   for(let place of arr) {
