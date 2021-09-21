@@ -18,7 +18,6 @@ const auth = getAuth(firebaseApp);
 const useAuth = () => {
   const [userLogin, setUserLogin] = useState();
 
-
   useEffect(() => {
     onAuthStateChanged(auth, user => {
       if (user !== null) {
@@ -30,6 +29,5 @@ const useAuth = () => {
   },[])
 
   return userLogin;
-
 }
 export default useAuth;
