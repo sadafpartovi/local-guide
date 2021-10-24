@@ -37,7 +37,7 @@ const SignUp = () => {
   return (
     <form onSubmit={handleSubmit}>
 
-      <input onChange={(e) => setEmail(e.target.value)} />
+      <input placeholder="email" onChange={(e) => setEmail(e.target.value)} />
 
       {mode === "OTP" && (
         <input onChange={(e) => setOTP(e.target.value)} placeholder="OTP" />
