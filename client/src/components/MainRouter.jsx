@@ -5,6 +5,7 @@ import Local from './local/Local'
 import './app.css'
 import LogIn from './logIn/LogIn';
 // import MyForm from './test/Form.jsx'
+import SignUp from './signUp/SignUp';
 
 
 const MainRouter = () => {
@@ -13,7 +14,9 @@ const MainRouter = () => {
       <Route path='/visitor' render={() => <Visitor/>}/>
       <Route path='/local' render={() => <Local/>}/>
       <Route path='/home' render={() => <Home/>}/>
+      <Route path='/signup' render={() => <SignUp/>}/>
       <Route path='/' render={() => <LogIn/>}/>
+
 
       {/* <Route path='/form' render={() => <MyForm/>}/> */}
     </Switch>

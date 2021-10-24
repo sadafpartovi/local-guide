@@ -1,60 +1,37 @@
-import "./login.css";
-import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
-import { useState, useEffect } from "react";
-import { useHistory } from 'react-router';
+import { useState } from "react";
+import axios from "axios";
+import {useHistory} from 'react-router';
 
 
-const LogIn = () => {
+const Login = () => {
+  const [email, setEmail] = useState();
+  const [password, setPassword] = useState();
+  const [wrong, setWrong] = useState(false)
+  const history = useHistory();
 
-  const [email, setEmail] = useState()
-  const [password, setPassword] = useState()
-  const history = useHistory()
-
-  const handleLogIn = (e) => {
-    e.preventDefault()
-    const auth = getAuth();
-    signInWithEmailAndPassword(auth, email, password)
-      .then((userCredential) => {
-        history.push("/feed");
-      })
-      .catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
-        const errorMsgs = {
-          "auth/invalid-email": "Please enter a valid email",
-          "auth/user-not-found":
-            "This email account is not registered with us. Please check the spelling and try again.",
-          "auth/wrong-password":
-            "Password does not match this email. Please try again.",
-        };
-
-      });
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      await axios.post("/api/login", { email, password });
+      history.push('/home')
+    } catch (error) {
+      setWrong(true)
+      console.log("hjhjwhd");
+    }
   };
+
   return (
-    <div className="container full-height form-group">
-      <div className="d-flex flex-row h-100 align-items-center">
-        <form onSubmit={(e) => handleLogIn(e)}>
-          <label>Email address</label>
-          <input
-            className="form-control-lg"
-            type="text"
-            placeholder="Enter email"
-            onChange={(e) => setEmail(e.target.value)}
-          />
-          <label>Password</label>
-          <input
-            className="form-control-lg"
-            type="password"
-            placeholder="Password"
-            onChange={(e) => setPassword(e.target.value)}
-          />
-          <div className="d-flex  justify-content-center align-items-center  mt-0">
-            <button type="submit">Login</button>
-          </div>
-        </form>
-      </div>
-    </div>
+    <form onSubmit={handleSubmit}>
+      <input onChange={(e) => setEmail(e.target.value)} placeholder="Email" />
+      <input
+        onChange={(e) => setPassword(e.target.value)}
+        placeholder="Password"
+      />
+      {wrong && <p>password or username is incorrect!</p>}
+      <button type="submit">login</button>
+      <button onClick={() => history.push('/signup')}> Signup</button>
+    </form>
   );
 };
 
-export default LogIn;
+export default Login;

@@ -1,8 +1,6 @@
 import MainContext from './mainContext';
 import {useState, useEffect} from 'react'
 import axios from 'axios'
-// import firebase from "../firebase.js";
-// import { getAuth } from "firebase/auth";
 
 const Provider = ({children})=>{
   const [city, setCity] = useState();
