@@ -16,18 +16,11 @@
 }
 
 .submit-button:hover{
-  background-color: #f50057 !important;
-  color:white !important;
+  background-color: white;
+  color: black;
 }
 
 form {
   border:2px solid lightgray;
   border-radius: 10px;
 }
-
-.signup-text {
-  color:#f50057;
-}
-
-
-

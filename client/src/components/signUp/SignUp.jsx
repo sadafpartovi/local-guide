@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
 import axios from "axios";
-
+import './signup.css'
 
 import { useHistory } from "react-router";
 
@@ -34,22 +34,26 @@ const SignUp = () => {
     }
   };
 
-  return (
-    <form onSubmit={handleSubmit}>
 
-      <input placeholder="email" onChange={(e) => setEmail(e.target.value)} />
+  return (
+    <>
+    <h1 className="mx-5 p-3">Signup</h1>
+    <form className="mx-5 p-3  d-flex justify-content-center flex-column align-items-center" onSubmit={handleSubmit}>
+
+      <input className="localForm m-3 p-3" placeholder="email" onChange={(e) => setEmail(e.target.value)} />
 
       {mode === "OTP" && (
-        <input onChange={(e) => setOTP(e.target.value)} placeholder="OTP" />
+        <input className="localForm m-3 p-3" onChange={(e) => setOTP(e.target.value)} placeholder="OTP" />
       )}
       {mode === "register" && (
         <>
-          <input onChange={(e) => setName(e.target.value)} placeholder="name" />
-          <input onChange={(e) => setPassword(e.target.value)} placeholder="password" />
+          <input className="localForm m-3 p-3" onChange={(e) => setName(e.target.value)} placeholder="name" />
+          <input className="localForm" onChange={(e) => setPassword(e.target.value)} placeholder="password" />
         </>
       )}
-      <button type="submit">Sign Up</button>
+      <button className="submit-button" type="submit">Sign Up</button>
     </form>
+    </>
   );
 };
 

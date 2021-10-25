@@ -13,9 +13,9 @@ const MainRouter = () => {
     <Switch>
       <Route path='/visitor' render={() => <Visitor/>}/>
       <Route path='/local' render={() => <Local/>}/>
-      <Route path='/home' render={() => <Home/>}/>
       <Route path='/signup' render={() => <SignUp/>}/>
-      <Route path='/' render={() => <LogIn/>}/>
+      <Route path='/login' render={() => <LogIn/>}/>
+      <Route path='/' render={() => <Home/>}/>
 
 
       {/* <Route path='/form' render={() => <MyForm/>}/> */}
