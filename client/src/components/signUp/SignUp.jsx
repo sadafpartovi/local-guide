@@ -3,6 +3,7 @@ import axios from "axios";
 import './signup.css'
 
 import { useHistory } from "react-router";
+import Nav from '../nav/NavBar';
 
 const SignUp = () => {
   const [OTP, setOTP] = useState("");
@@ -37,6 +38,7 @@ const SignUp = () => {
 
   return (
     <>
+    <Nav/>
     <h1 className="mx-5 p-3">Signup</h1>
     <form className="mx-5 p-3  d-flex justify-content-center flex-column align-items-center" onSubmit={handleSubmit}>
 

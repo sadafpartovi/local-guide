@@ -13,8 +13,8 @@ input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
 input:-webkit-autofill:active {
-    box-shadow: 0 0 0 30px var(--white) inset !important;
-    -webkit-box-shadow: 0 0 0 30px var(--white) inset !important;
+  box-shadow: 0 0 0 30px var(--white) inset !important;
+  -webkit-box-shadow: 0 0 0 30px var(--white) inset !important;
 }
 
 .img-card {
@@ -51,6 +51,12 @@ input:-webkit-autofill:active {
   min-width: 200px;
 }
 
+.searchBar {
+  position: relative;
+}
 
-
-
+.magnifyingGlass {
+  position: absolute;
+  top: .5rem;
+  left: 65rem;
+}

@@ -5,11 +5,14 @@ import "./local.css";
 import ModalBtn from "./Modal.jsx";
 import img1 from '../../statics/image/city2.svg'
 import mainContext from '../../context/mainContext';
+import Nav from '../nav/NavBar';
 
 const Local = () => {
   const {city, setCity, title, setTitle, type, setType, description, setDescription, img, setImg, msg, setMsg, postForm} = useContext(mainContext)
 
   return (
+    <>
+    <Nav/>
     <div >
       <h1 className="text-center p-5">Share Your World as a Local Guide</h1>
 
@@ -64,6 +67,7 @@ const Local = () => {
       </div>
 
     </div>
+    </>
   );
 };
 export default Local;

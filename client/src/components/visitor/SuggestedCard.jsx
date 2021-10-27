@@ -1,7 +1,6 @@
 import "./visitor.css";
-// import { Card } from 'react-bootstrap';
 import {useState} from 'react'
-import axios from "axios";
+
 
 const SuggestedCard = ({ title, description, img, handleLike, like}) => {
   const [likeNum, setLikeNum] = useState(like)

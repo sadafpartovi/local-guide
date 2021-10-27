@@ -2,14 +2,17 @@ import './home.css'
 import img from '../../statics/image/map.png'
 import img1 from '../../statics/image/city1.svg'
 import {useHistory} from 'react-router'
+import Nav from '../nav/NavBar';
 const Home = () => {
   const history = useHistory()
   return (
+    <>
+    <Nav />
     <div className='container full-height'>
 
       <div className='d-flex flex-column h-100 align-items-center '>
 
-      <button onClick={() => history.push('/login')} className='login align-self-end'><i className="fa fa-user-plus"></i></button>
+     
       <h1 className="text-center mx-0">Say Hello To Your Local Guide</h1>
 
       <img className='homeImg' alt='myimage' src={img1}/>
@@ -21,6 +24,7 @@ const Home = () => {
 
 
     </div>
+    </>
   )
 }
 export default Home

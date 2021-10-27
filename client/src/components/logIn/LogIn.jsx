@@ -2,6 +2,7 @@ import { useState } from "react";
 import axios from "axios";
 import { useHistory } from "react-router";
 import "./login.css";
+import Nav from '../nav/NavBar';
 
 const Login = () => {
   const [email, setEmail] = useState();
@@ -22,6 +23,7 @@ const Login = () => {
 
   return (
     <>
+    <Nav/>
     <h1 className="mx-5 p-3" >Login</h1>
     <form
       onSubmit={handleSubmit}

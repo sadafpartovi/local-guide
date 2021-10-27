@@ -4,7 +4,9 @@ import mainContext from "../../context/mainContext";
 
 const ModalBtn = ({ show, setShow }) => {
   const handleClose = () => setShow(false);
-  const { city, title, type, description, img } = useContext(mainContext);
+  const { city, title,img} = useContext(mainContext);
+
+
 
   return (
     <>

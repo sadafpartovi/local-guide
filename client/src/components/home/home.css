@@ -23,19 +23,5 @@
 .full-height {
   height: 100vh;
 }
-.login {
-  float: right;
-  color: black !important;
-  background-color: white !important;
-  margin: 1rem;
-  padding: 0.25em 0.75em;
-  min-width: 40px;
-  min-height: 40px;
 
-}
-
-i {
-  width: 100%;
-  height: 100%;
-}
 

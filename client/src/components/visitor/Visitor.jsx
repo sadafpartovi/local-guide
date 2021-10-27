@@ -4,10 +4,10 @@ import { useState, useEffect } from "react";
 import SuggestedCard from "./SuggestedCard";
 import axios from "axios";
 import FinalMap from './Map.jsx'
-import MainRouter from '../MainRouter';
+import Nav from '../nav/NavBar';
+
 
 const Visitor = () => {
-  //Add the state to context
   const [places, setPlaces] = useState([]);
   const [mapShow, setMapshow] = useState(false)
   const [page, setPage] = useState(0)
@@ -75,6 +75,8 @@ const Visitor = () => {
 
 
   return (
+    <>
+    <Nav/>
     <div>
       <Search handleSearch={handleSearch} setMapshow={setMapshow} mapShow={mapShow} setSelectedFilter={setSelectedFilter} setCity={setCity} selectedFilter={selectedFilter} city={city} />
       <div className='d-flex justify-content-center'>
@@ -95,6 +97,7 @@ const Visitor = () => {
 
      {load && <div className="d-flex justify-content-center"> <button className='selectedFilter' onClick={()=> setPage(page +1)}>Load More</button> </div>}
     </div>
+    </>
   );
 };
 export default Visitor;
