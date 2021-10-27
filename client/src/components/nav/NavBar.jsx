@@ -4,17 +4,22 @@ const Nav = () => {
   const history = useHistory();
 
   return (
-    <div className='d-flex flex-rows align-items-center p-3 justify-content-around' >
-      <p onClick={() => history.push('/home')}>Home</p>
-      <p onClick={() => history.push('/local')}>Local</p>
-      <p onClick={() => history.push('/visitor')}>Visitor</p>
-      <p
-        onClick={() => history.push("/login")}
-        className="login align-self-end"
-      >
+    <div className="d-flex navContainer mb-2">
+      <p className="logo p-3" onClick={() => history.push("/home")}>
+        Local Guide
+      </p>
+      <p className="p-3" onClick={() => history.push("/local")}>
+        Local
+      </p>
+      <p className="p-3" onClick={() => history.push("/visitor")}>
+        Visitor
+      </p>
+      <p onClick={() => history.push("/login")} className="login p-3">
         <i className="fa fa-user-plus"></i>
       </p>
     </div>
+
+
   );
 };
 

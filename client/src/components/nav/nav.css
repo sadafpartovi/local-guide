@@ -1,4 +1,14 @@
-p:hover {
+.navContainer {
+  border-bottom:1px solid whitesmoke;
+}
+p:hover,
+.logo {
   color: crimson;
   font-weight: bold;
+  cursor: pointer;
+}
+
+
+.login {
+  margin-left: auto;
 }
