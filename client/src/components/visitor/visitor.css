@@ -24,7 +24,7 @@ input:-webkit-autofill:active {
 }
 
 .selectedFilter {
-  background-color: black;
+  background-color: crimson;
   color: white;
   border-radius: 50px;
   border: none;

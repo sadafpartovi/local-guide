@@ -21,12 +21,13 @@ const Provider = ({children})=>{
           description,
           img,
         });
-        setCity('');
-        setTitle('');
-        setType('');
-        setDescription('');
-        setImg('');
+
         setMsg(true);
+        // setCity('');
+        // setTitle('');
+        // setType('');
+        // setDescription('');
+        // setImg('');
       } catch (err) {
         console.log(err);
       }

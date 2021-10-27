@@ -11,8 +11,20 @@
   border: none;
   margin: 1rem;
   padding: 1rem;
-
   min-width: 200px
+}
+
+.modalImg {
+  max-width: 300px;
+  max-height: 300px;
+  box-shadow: darkgray;
+  object-fit: cover;
+  object-position:50% 50%;
+
+}
+
+.thanksLocal {
+  color: crimson;
 }
 
 
