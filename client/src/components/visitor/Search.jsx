@@ -20,7 +20,7 @@ const Search = ({handleSearch, setMapshow, mapShow, setCity, setSelectedFilter, 
 
   return (
     <div>
-      <div className="d-flex justify-content-center">
+      <div className="d-flex justify-content-center searchContainer">
         <form onSubmit={(e) => submitForm(e)} className="d-inline-flex align-items-center justify-content-between search-nav-form p-1 mt-4 mx-auto searchBar">
           <input placeholder="Search" className="mx-2 py-2 " onChange={(e) => setCity(e.target.value)}/>
           <i className="fa fa-search p-2 magnifyingGlass" style={{ fontSize: "20px" }}></i>
